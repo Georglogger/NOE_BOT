@@ -49,8 +49,49 @@ npm start
 
 Die `.gitignore` Datei verhindert, dass dein Token auf GitHub hochgeladen wird. **Teile niemals deinen Bot-Token!**
 
+## Docker Deployment (Linux Server)
+
+### Voraussetzungen
+- Docker und Docker Compose installiert
+
+### Deployment Schritte
+
+1. **Repository auf Server clonen:**
+   ```bash
+   git clone <dein-github-repo-url>
+   cd NOE_BOT
+   ```
+
+2. **Token in .env eintragen:**
+   ```bash
+   nano .env
+   # Ersetze "dein_bot_token_hier" mit deinem echten Token
+   ```
+
+3. **Bot mit Docker starten:**
+   ```bash
+   docker-compose up -d
+   ```
+
+4. **Logs ansehen:**
+   ```bash
+   docker-compose logs -f
+   ```
+
+5. **Bot stoppen:**
+   ```bash
+   docker-compose down
+   ```
+
+6. **Bot neu starten (nach Updates):**
+   ```bash
+   git pull
+   docker-compose up -d --build
+   ```
+
 ## Funktionsweise
 
 - Der Bot reagiert auf alle Nachrichten, die "Nö" enthalten
+- Der Bot antwortet wenn ALLE Wörter einer Nachricht mindestens ein "C" oder "c" enthalten
 - Er ignoriert seine eigenen Nachrichten
 - Er antwortet immer mit "Nö"

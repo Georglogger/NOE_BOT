@@ -1,0 +1,16 @@
+{
+  "name": "noe-discord-bot",
+  "version": "1.0.0",
+  "description": "Ein Discord Bot der auf 'Nö' mit 'Nö' antwortet",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "keywords": ["discord", "bot"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1"
+  }
+}

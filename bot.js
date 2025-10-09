@@ -36,20 +36,6 @@ client.on('messageCreate', async (message) => {
         return;
     }
 
-    // Prüfe ob JEDES Wort mindestens ein "C" oder "c" enthält
-    const words = message.content.trim().split(/\s+/); // Teile Nachricht in Wörter
-
-    if (words.length > 0) {
-        // Prüfe ob alle Wörter mindestens ein C enthalten
-        const allWordsHaveC = words.every(word =>
-            word.toLowerCase().includes('c')
-        );
-
-        if (allWordsHaveC) {
-            message.channel.send(`${message.author} Nö`);
-        }
-    }
-
     // RNG Duplo Gewinnspiel - 1 zu 1000 Chance
     const random1 = Math.floor(Math.random() * 1000) + 1;
     const random2 = Math.floor(Math.random() * 1000) + 1;

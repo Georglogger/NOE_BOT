@@ -40,6 +40,14 @@ client.on('messageCreate', async (message) => {
             message.channel.send(`${message.author} Nö`);
         }
     }
+
+    // RNG Duplo Gewinnspiel - 1 zu 1000 Chance
+    const random1 = Math.floor(Math.random() * 1000) + 1;
+    const random2 = Math.floor(Math.random() * 1000) + 1;
+
+    if (random1 === random2) {
+        message.channel.send(`${message.author} <@YOUR_DISCORD_NAME_HERE> WOW DU HAST EINE WAHRSCHEINLICHKEIT VON 1 ZU 1000 GEWONNEN! DU KRIEGST NEN DUPLO :D`);
+    }
 });
 
 // Bot mit Token anmelden

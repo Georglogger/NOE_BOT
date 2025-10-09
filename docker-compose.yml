@@ -6,6 +6,6 @@ services:
     working_dir: /app
     command: sh -c "npm install && node bot.js"
     environment:
-      - DISCORD_TOKEN=MTM1MjE4MDAxNTk2MTM0NjA4OQ.GLCK5g.yygyzyXLt1mfI4M8PvxV3GF661CjpIz67zr64E
+      - DISCORD_TOKEN=(YOUR_TOKEN_HERE)
     volumes:
-      - /mnt/user/Discord_Stuff/:/app
+      - /YOUR_PATH_HERE

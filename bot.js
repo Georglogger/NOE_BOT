@@ -29,8 +29,8 @@ client.on('messageCreate', async (message) => {
     // Ignoriere Nachrichten vom Bot selbst
     if (message.author.bot) return;
 
-    // Prüfe ob die Nachricht "Nö" enthält (Groß-/Kleinschreibung egal)
-    if (message.content.toLowerCase().includes('nö')) {
+    // Prüfe ob die Nachricht "Doch" enthält (Groß-/Kleinschreibung egal)
+    if (message.content.toLowerCase().includes('doch')) {
         // Antworte mit "Nö" und erwähne die Person
         message.channel.send(`${message.author} Nö`);
         return;

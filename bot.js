@@ -10,13 +10,16 @@ const client = new Client({
     ]
 });
 
+// Bot-ID vom Doch Bot (damit dieser Bot ihn ignoriert)
+const DOCH_BOT_ID = 'DOCH_BOT_ID_HIER_EINTRAGEN';
+
 // Event wenn der Bot bereit ist
 client.once('ready', () => {
     console.log(`Bot ist eingeloggt als ${client.user.tag}!`);
 
     // Status setzen
     client.user.setPresence({
-        activities: [{ name: 'Du kannst etwas gewinnen! 👀' }],
+        activities: [{ name: 'Wer wird es nur sein?' }],
         status: 'online',
     });
 });

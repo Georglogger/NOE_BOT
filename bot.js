@@ -13,6 +13,12 @@ const client = new Client({
 // Event wenn der Bot bereit ist
 client.once('ready', () => {
     console.log(`Bot ist eingeloggt als ${client.user.tag}!`);
+
+    // Status setzen
+    client.user.setPresence({
+        activities: [{ name: 'Du kannst etwas gewinnen! 👀' }],
+        status: 'online',
+    });
 });
 
 // Event für neue Nachrichten

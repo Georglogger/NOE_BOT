@@ -26,7 +26,7 @@ client.once('ready', () => {
 
 // Event für neue Nachrichten
 client.on('messageCreate', async (message) => {
-    // Ignoriere Nachrichten vom Bot selbst
+    // Ignoriere Nachrichten von ALLEN Bots (verhindert Endlosschleife)
     if (message.author.bot) return;
 
     // Prüfe ob die Nachricht "Doch" enthält (Groß-/Kleinschreibung egal)

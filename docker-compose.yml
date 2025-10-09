@@ -1,11 +1,11 @@
-version: '3.8'
-
 services:
   noe-bot:
-    build: .
+    image: node:18-alpine
     container_name: noe-discord-bot
     restart: unless-stopped
+    working_dir: /app
+    command: sh -c "npm install && node bot.js"
     environment:
-      - DISCORD_TOKEN=${DISCORD_TOKEN}
-    env_file:
-      - .env
+      - DISCORD_TOKEN=MTM1MjE4MDAxNTk2MTM0NjA4OQ.GLCK5g.yygyzyXLt1mfI4M8PvxV3GF661CjpIz67zr64E
+    volumes:
+      - /mnt/user/Discord_Stuff/:/app

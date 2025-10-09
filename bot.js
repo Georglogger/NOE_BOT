@@ -22,8 +22,8 @@ client.on('messageCreate', async (message) => {
 
     // Prüfe ob die Nachricht "Nö" enthält (Groß-/Kleinschreibung egal)
     if (message.content.toLowerCase().includes('nö')) {
-        // Antworte mit "Nö"
-        message.channel.send('Nö');
+        // Antworte mit "Nö" und erwähne die Person
+        message.channel.send(`${message.author} Nö`);
         return;
     }
 
@@ -37,7 +37,7 @@ client.on('messageCreate', async (message) => {
         );
 
         if (allWordsHaveC) {
-            message.channel.send('Nö');
+            message.channel.send(`${message.author} Nö`);
         }
     }
 });
